@@ -1,3 +1,7 @@
+# Dot files
+.DS_Store
+._*
+
 # Logs
 logs
 *.log
