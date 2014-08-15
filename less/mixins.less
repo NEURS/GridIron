@@ -35,10 +35,11 @@
 	margin-right: (@gutter / -2);
 }
 
-.breakpoints (@columns: @grid_columns, @row_name: ~".row", @container_name: ~".container") {
+.breakpoints (@columns: @grid_columns, @row_name: ~"", @container_name: ~".container") {
 	@count: (@num_breakpoints * 2);
 
 	.base () {
+		float: left;
 		min-height: 1px;
 		padding-left: (@grid_gutter / 2);
 		padding-right: (@grid_gutter / 2);
@@ -59,11 +60,11 @@
 		.column_single (@row_name, @name, @columns, initial_breakpoints);
 
 		.column_single_callback (initial_breakpoints, @index, @cols) when (@index < @cols) {
-			float: left;
 			width: percentage(@index / @cols);
 		}
 
 		.column_single_callback (initial_breakpoints, @index, @cols) when (@index = @cols) {
+			float: none;
 			width: 100%;
 		}
 
@@ -88,11 +89,11 @@
 			.column_single (@row_name, @name, @columns, initial_breakpoints);
 
 			.column_single_callback (initial_breakpoints, @index, @cols) when (@index < @cols) {
-				float: left;
 				width: percentage(@index / @cols);
 			}
 
 			.column_single_callback (initial_breakpoints, @index, @cols) when (@index = @cols) {
+				float: none;
 				width: 100%;
 			}
 		}
