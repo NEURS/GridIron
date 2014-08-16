@@ -2,6 +2,7 @@
   "name": "GridIron",
   "version": "0.0.2",
   "homepage": "https://github.com/NEURS/GridIron",
+  "main": "less/gridiron.less",
   "authors": [
     "Kevin Martin <kevin@neurs.com>"
   ],
