@@ -1,0 +1,30 @@
+{
+  "name": "GridIron",
+  "version": "0.0.2",
+  "homepage": "https://github.com/NEURS/GridIron",
+  "authors": [
+    "Kevin Martin <kevin@neurs.com>"
+  ],
+  "description": "Extensible LESS Framework for Custom Grids and Breakpoints",
+  "keywords": [
+    "less",
+    "css",
+    "lesscss",
+    "framework",
+    "mixin",
+    "mixins",
+    "grid",
+    "grids",
+    "breakpoint",
+    "breakpoints",
+    "gridiron"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
