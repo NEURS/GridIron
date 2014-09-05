@@ -6,7 +6,7 @@
  * Released under the MIT license
  * https://github.com/NEURS/GridIron/blob/master/LICENSE
  *
- * Date: 2014-08-22T16:18Z
+ * Date: 2014-09-05T21:10Z
  */
 html {
   box-sizing: border-box;
@@ -25,16 +25,30 @@ html {
 .text-right {
   text-align: right !important;
 }
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+}
 .pull-left {
   float: left !important;
 }
-.pull-righ {
+.pull-right {
   float: right !important;
 }
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
 }
 .clearfix:before,
 .clearfix:after,

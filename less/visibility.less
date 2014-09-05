@@ -8,41 +8,50 @@
 
 
 //Visible
-.visible_loop () {
-	@name:		extract(@breakpoints, 1);
-	@width:		extract(@breakpoints, 2);
-	@name2: 	extract(@breakpoints, 3);
-	@width2: 	extract(@breakpoints, 4);
+.visibility_mixins(initial_breakpoints) {
+	@index: 1;
+	@count: (@num_breakpoints * 2);
 
-	.visible-@{name} {
-	  	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-			.responsive-visibility();
-	  	}
-	}
-	.visible-@{name}-block {
-	  	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-			display: block !important;
-	  	}
-	}
-	.visible-sm-inline {
-	  	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-			display: inline !important;
-	  	}
-	}
-	.visible-sm-inline-block {
-	  	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-			display: inline-block !important;
-	  	}
-	}
-}
+		.make_loop(@index) when (@index = 1) {
+			@name: 	extract(@breakpoints, @index);
+			@min: 	0px;
+			@max: 	extract(@breakpoints, @index + 2);
 
-//Hidden
-.hidden_loop () {
+			.visible-@{name} {
+				display: block !important;
+			}
+			.visible-@{name} {
+			  	@media (min-width: @min) and (max-width: @max) {
+					.responsive-visibility();
+			  	}
+			}			
+			.visible-@{name}-block {
+			  	@media (min-width: @min) and (max-width: @max) {
+					display: block !important;
+			  	}
+			}
+			.visible-@{name}-inline {
+			  	@media (min-width: @min) and (max-width: @max) {
+					display: inline !important;
+			  	}
+			}
+			.visible-@{name}-inline-block {
+			  	@media (min-width: @min) and (max-width: @max) {
+					display: inline-block !important;
+			  	}
+			}
+			.hidden-@{name} {
+				@media (min-width: @min) and (max-width: @max) {
+			  		.responsive-invisibility();
+				}
+			}
+		.make_loop((@index + 2));
+	}
 
-
-	.hidden-@name {
-		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-	  		.responsive-invisibility();
-		}
+	.make_loop(@index) when (@index > 1) and (@index < @count){
+		@name: 	extract(@breakpoints, @index + 1);
+		@min: 	extract(@breakpoints, @index);
+		@max: 	extract(@breakpoints, (@index + 2));
+		.make_loop((@index + 2));
 	}
 }
