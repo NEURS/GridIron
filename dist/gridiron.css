@@ -6,7 +6,7 @@
  * Released under the MIT license
  * https://github.com/NEURS/GridIron/blob/master/LICENSE
  *
- * Date: 2014-09-05T21:10Z
+ * Date: 2014-09-08T15:30Z
  */
 html {
   box-sizing: border-box;
@@ -324,5 +324,113 @@ html {
    .col-lg-12 {
     float: none;
     width: 100%;
+  }
+}
+.visible-xs,
+.visible-xs-inline,
+.visible-xs-block,
+.visible-xs-inline-block {
+  display: none !important;
+}
+.visible-sm,
+.visible-sm-inline,
+.visible-sm-block,
+.visible-sm-inline-block {
+  display: none !important;
+}
+.visible-md,
+.visible-md-inline,
+.visible-md-block,
+.visible-md-inline-block {
+  display: none !important;
+}
+.visible-lg,
+.visible-lg-inline,
+.visible-lg-block,
+.visible-lg-inline-block {
+  display: none !important;
+}
+.visible-xs {
+  display: block !important;
+}
+@media (min-width: 0px) and (max-width: 480px) {
+  .visible-xs {
+    display: block !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 480px) {
+  .visible-xs-block {
+    display: block !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 480px) {
+  .visible-xs-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 480px) {
+  .visible-xs-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 480px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+.visible-sm {
+  display: block !important;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .visible-sm {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .visible-sm-block {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .visible-sm-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .visible-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+.visible-md {
+  display: block !important;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .visible-md {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .visible-md-block {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .visible-md-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .visible-md-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hidden-md {
+    display: none !important;
   }
 }
