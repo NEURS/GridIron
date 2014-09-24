@@ -1,12 +1,12 @@
-var del			= require('del'),
-	gulp		= require('gulp'),
-	less		= require('gulp-less'),
-	cssmin		= require('gulp-cssmin'),
-	rename		= require('gulp-rename'),
-	replace		= require('gulp-replace'),
-	sourcemaps	= require('gulp-sourcemaps'),
-	prefix		= require('gulp-autoprefixer'),
-	pkg			= require('./package.json');
+var del					= require('del'),
+		gulp				= require('gulp'),
+		less				= require('gulp-less'),
+		cssmin			= require('gulp-cssmin'),
+		rename			= require('gulp-rename'),
+		replace			= require('gulp-replace'),
+		sourcemaps	= require('gulp-sourcemaps'),
+		prefix			= require('gulp-autoprefixer'),
+		pkg					= require('./package.json');
 
 function compileCSS(fileName, doSourcemaps, doMinify) {
 	return function () {
