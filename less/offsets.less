@@ -1,0 +1,33 @@
+.offset_mixins(@cols, @row_name: ~"") {
+  @count: (@num_breakpoints * 2);
+
+  .make_offsets(@index){
+    @name:	extract(@breakpoints, @index);
+    @name2: ~"@{name}";
+    @width: extract(@breakpoints, (@index + 1));
+    @media (min-width: @width) {
+      .offset_loop(@name2);
+    }
+  }
+
+  .offset_loop(@name, @col_index: 0) when (@col_index =< @cols){
+    @{row_name} .col-@{name}-offset-@{col_index} {
+      margin-left: percentage((@col_index / @cols));
+    }
+    @{row_name} .col-@{name}-push-@{col_index} {
+      left: percentage((@col_index / @cols));
+    }
+    @{row_name} .col-@{name}-pull-@{col_index} {
+      right: percentage((@col_index / @cols));
+    }
+
+    .offset_loop(@name, @col_index + 1);
+  }
+
+  .make_offsets_loop(@index: 1) when (@index < @count){
+    .make_offsets(@index);
+    .make_offsets_loop(@index + 2)
+  }
+
+  .make_offsets_loop();
+}
