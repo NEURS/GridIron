@@ -52,8 +52,8 @@
 
 	.visibility_loop(@index: 3) when (@index > 1) and (@index < (@count - 2)) {
 		@name: 	extract(@breakpoints, @index);
-		@min: 	extract(@breakpoints, @index + 1);
-		@max: 	extract(@breakpoints, (@index + 3));
+		@min: 	extract(@breakpoints, @index - 1);
+		@max: 	extract(@breakpoints, (@index + 1));
 		.visibility(@name, @min, @max);
 		.visibility_loop(@index + 2);
 	}

@@ -6,7 +6,7 @@
  * Released under the MIT license
  * https://github.com/NEURS/GridIron/blob/master/LICENSE
  *
- * Date: 2014-09-24T16:45Z
+ * Date: 2014-11-03T16:48Z
  */
 html {
   box-sizing: border-box;
@@ -383,27 +383,27 @@ html {
 .visible-sm {
   display: block !important;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .visible-sm {
     display: block !important;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .visible-sm-block {
     display: block !important;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .visible-sm-inline {
     display: inline !important;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .visible-sm-inline-block {
     display: inline-block !important;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .hidden-sm {
     display: none !important;
   }
@@ -411,27 +411,27 @@ html {
 .visible-md {
   display: block !important;
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .visible-md {
     display: block !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .visible-md-block {
     display: block !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .visible-md-inline {
     display: inline !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .visible-md-inline-block {
     display: inline-block !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .hidden-md {
     display: none !important;
   }
