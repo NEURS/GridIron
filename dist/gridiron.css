@@ -6,7 +6,7 @@
  * Released under the MIT license
  * https://github.com/NEURS/GridIron/blob/master/LICENSE
  *
- * Date: 2014-11-03T16:48Z
+ * Date: 2014-11-03T17:04Z
  */
 html {
   box-sizing: border-box;
@@ -433,6 +433,34 @@ html {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .hidden-md {
+    display: none !important;
+  }
+}
+.visible-lg {
+  display: block !important;
+}
+@media (min-width: 992px) {
+  .visible-lg {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) {
+  .visible-lg-block {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) {
+  .visible-lg-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 992px) {
+  .visible-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 992px) {
+  .hidden-lg {
     display: none !important;
   }
 }
